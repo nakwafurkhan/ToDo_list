@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+  }
+  
+  #input {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+  }
+  
+  #button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  a {
+    margin-left: 10px;
+    cursor: pointer;
+    color: red;
+  }
+  
