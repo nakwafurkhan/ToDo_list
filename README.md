@@ -1,41 +1,45 @@
 # To-Do List Application
-A simple and intuitive To-Do List application built with HTML, CSS, and JavaScript. It allows users to add, edit, and delete tasks easily.
+
+Overview
+This is a simple task management application that allows users to create main tasks and manage associated sub-tasks. Users can add, edit, and delete both main tasks and their corresponding sub-tasks, providing an organized way to manage to-do lists.
 
 Features
-Add a Task: Users can input a task and click the "Add" button to add it to the list.
-Edit a Task: Tasks can be edited by clicking the "Edit" link next to each task.
-Delete a Task: Tasks can be deleted by clicking the "Delete" link next to each task.
-
-Project Structure
-graphql
-
-├── index.html     # Main HTML file
-├── style.css      # CSS file for styling
-└── script.js      # JavaScript file for functionality
-
-index.html
-Defines the structure of the application with an input field, a button to add tasks, and a list to display the tasks.
-
-style.css
-Provides basic styling for the input field, button, and task list to give the app a clean look.
-
-script.js
-Contains the logic for adding tasks, displaying them in the list, editing them, and deleting tasks.
-
-How to Use
-Open index.html in your browser.
-Enter a task in the input field and click "Add" to add it to the list.
-Click "Edit" to modify a task, or "Delete" to remove it.
-
+Add, edit, and delete main tasks.
+Create and manage sub-tasks for each main task.
+Easy navigation between tasks and sub-tasks.
+Local storage support to persist tasks across sessions.
+Keyboard accessibility for adding and deleting tasks.
+Technologies Used
+HTML5
+CSS3
+JavaScript
+Local Storage API
 Getting Started
-To run the app locally:
-
-Clone the repository:
+Prerequisites
+A modern web browser (Chrome, Firefox, etc.)
+Installation
+Clone this repository to your local machine:
 bash
 Copy code
-git clone https://github.com/nakwafurkhan/ToDo_list.git
-Open the index.html file in a web browser.
-License
-This project is licensed under the MIT License.
+git clone https://github.com/yourusername/task-management-app.git
+Navigate to the project directory:
+bash
+Copy code
+cd task-management-app
+Open index.html in your web browser.
+Usage
+Add a Task: Type a task name in the input field and press Enter or click the "Add" button.
+Manage Tasks: For each task, you can edit or delete it using the respective buttons.
+Add Sub-tasks: Click on the "Sub-tasks" button next to a main task to navigate to its sub-tasks page, where you can add, edit, or delete sub-tasks.
+Keyboard Shortcuts:
+Press Enter to add a task or sub-task.
+Use the Delete key to delete a selected sub-task.
+Contributing
+If you would like to contribute to this project, feel free to submit a pull request or open an issue with suggestions.
 
-This README provides a clear structure and helps users understand how to use and run the project​(index)​(style)​(script).
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgements
+Inspired by various task management tools.
+Special thanks to online resources for learning about web development.

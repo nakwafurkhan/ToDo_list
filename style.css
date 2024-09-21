@@ -85,11 +85,6 @@ ul li {
     align-items: center;
 }
 
-ul li span {
-    font-weight: 500;
-    color: #5d5b37;
-}
-
 /* Edit and delete links styling */
 a {
     color: #b57d5b;
@@ -113,28 +108,39 @@ a.delete:hover {
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
     #input, #subtask-input {
-        width: 80%;
+        width: 100%;
+        margin-bottom: 10px; /* Added margin for spacing */
     }
 
     #button, #subtask-button {
-        width: 20%;
+        width: 100%;
+    }
+
+    .form {
+        flex-direction: column; /* Stack input and button */
+    }
+
+    ul li {
+        flex-direction: column; /* Stack elements in list items */
+        align-items: flex-start; /* Align text to the start */
+    }
+
+    a {
+        margin-top: 10px; /* Space between links */
+        margin-left: 0; /* Reset margin-left */
     }
 }
 
 @media (max-width: 480px) {
-    .form {
-        flex-direction: column;
+    h1 {
+        font-size: 28px; /* Reduce heading size */
     }
 
     #input, #subtask-input, #button, #subtask-button {
-        width: 100%;
+        width: 100%; /* Full width on small screens */
     }
 
     ul li {
-        flex-direction: column;
-    }
-
-    a {
-        margin-top: 10px;
+        padding: 10px; /* Reduce padding for small screens */
     }
 }
