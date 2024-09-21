@@ -1,38 +1,140 @@
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 50px;
-  }
-  
-  #input {
-    width: 200px;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid lightgray;
-  }
-  
-  #button {
-    padding: 10px 20px;
-    background-color: #28a745;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdf6e3, #f5f0e1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 36px;
+    color: #5d5b37;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for forms and lists */
+.container {
+    background: #f9f4e8;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Form styling */
+.form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+#input, #subtask-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#input:focus, #subtask-input:focus {
+    box-shadow: 0px 5px 15px rgba(255, 204, 102, 0.3);
+}
+
+/* Button styling */
+#button, #subtask-button, .subtask-btn {
+    background-color: #d5b57d;
     color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
     border: none;
+    font-size: 16px;
     cursor: pointer;
-  }
-  
-  ul {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#button:hover, #subtask-button:hover, .subtask-btn:hover {
+    background-color: #c6a86d;
+    transform: translateY(-3px);
+}
+
+/* Task and Sub-task list styling */
+ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px;
-  }
-  
-  li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  a {
-    margin-left: 10px;
+}
+
+ul li {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li span {
+    font-weight: 500;
+    color: #5d5b37;
+}
+
+/* Edit and delete links styling */
+a {
+    color: #b57d5b;
+    margin-left: 15px;
     cursor: pointer;
-    color: red;
-  }
-  
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a86d4f;
+}
+
+a.delete {
+    color: #e74c3c;
+}
+
+a.delete:hover {
+    color: #c0392b;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #input, #subtask-input {
+        width: 80%;
+    }
+
+    #button, #subtask-button {
+        width: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        flex-direction: column;
+    }
+
+    #input, #subtask-input, #button, #subtask-button {
+        width: 100%;
+    }
+
+    ul li {
+        flex-direction: column;
+    }
+
+    a {
+        margin-top: 10px;
+    }
+}
