@@ -1,146 +1,136 @@
 /* General body styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #fdf6e3, #f5f0e1);
-    color: #333;
+    font-family: 'Poppins', sans-serif; /* Font style */
+    background: linear-gradient(135deg, #fefbd8, #e2d1c3); /* Soft gradient background */
+    color: #3a3a3a; /* Text color */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0; /* Reset default margin */
+    padding: 20px; /* Padding around the body */
 }
 
 /* Heading styling */
 h1 {
-    font-size: 36px;
-    color: #5d5b37;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    font-size: 28px; /* Font size for heading */
+    color: #4d3a29; /* Darker color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center the text */
 }
 
-/* Container for forms and lists */
+/* Container for tasks and sub-tasks */
 .container {
-    background: #f9f4e8;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
+    background: #ffffff; /* White background for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+    margin: 10px; /* Margin around the container */
 }
 
-/* Form styling */
-.form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+/* List styling */
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* No padding */
+    margin: 0 0 10px; /* Space below the list */
 }
 
-/* Input styling */
-#input, #subtask-input {
-    flex-grow: 1;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    outline: none;
-    transition: box-shadow 0.3s ease;
+/* Task and sub-task item styling */
+li {
+    margin-bottom: 10px; /* Space between list items */
 }
 
-#input:focus, #subtask-input:focus {
-    box-shadow: 0px 5px 15px rgba(255, 204, 102, 0.3);
+/* Add top margin to the first task below the Add button */
+li:first-child {
+    margin-top: 20px; /* Space above the first task */
+}
+
+/* Task and Sub-task content styling */
+.task-content {
+    padding: 15px; /* Padding inside the task content */
+    background-color: #F4C2C2; /* Maroon background for tasks */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow effect for depth */
+}
+
+/* Buttons styling */
+.button-container {
+    display: flex; /* Flexbox layout for buttons */
+    gap: 5px; /* Space between buttons */
+    margin-top: 10px; /* Space above the buttons */
 }
 
 /* Button styling */
-#button, #subtask-button, .subtask-btn {
-    background-color: #d5b57d;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+button {
+    background-color: #8B4513; /* Dark green background for buttons */
+    color: white; /* White text color */
+    padding: 10px; /* Padding inside buttons */
+    border-radius: 8px; /* Rounded corners */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+    flex: 1; /* Buttons grow equally in the container */
 }
 
-#button:hover, #subtask-button:hover, .subtask-btn:hover {
-    background-color: #c6a86d;
-    transform: translateY(-3px);
-}
-
-/* Task and Sub-task list styling */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+button:hover {
+    background-color: #D2B48C; /* Light cream color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 /* Edit and delete links styling */
 a {
-    color: #b57d5b;
-    margin-left: 15px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    color: #8B4513; /* Dark green color for links */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 a:hover {
-    color: #a86d4f;
+    color: #D2B48C; /* Change color on hover */
 }
 
-a.delete {
-    color: #e74c3c;
+/* Form styling */
+.form {
+    display: flex; /* Flexbox layout for the form */
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 15px; /* Space between inputs */
 }
 
-a.delete:hover {
-    color: #c0392b;
+/* Input styling */
+input[type="text"] {
+    padding: 12px; /* Padding inside input */
+    border-radius: 15px; /* Rounded corners */
+    border: 2px solid #8B4513; /* Dark green border */
+    font-size: 16px; /* Font size for input */
+    outline: none; /* Remove outline */
+    transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition for focus effects */
+}
+
+input[type="text"]:focus {
+    box-shadow: 0px 0px 10px rgba(139, 69, 19, 0.5); /* Shadow effect on focus */
+    border: 2px solid #D2B48C; /* Light cream border on focus */
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 768px) {
-    #input, #subtask-input {
-        width: 100%;
-        margin-bottom: 10px; /* Added margin for spacing */
-    }
-
-    #button, #subtask-button {
-        width: 100%;
-    }
-
-    .form {
-        flex-direction: column; /* Stack input and button */
-    }
-
-    ul li {
-        flex-direction: column; /* Stack elements in list items */
-        align-items: flex-start; /* Align text to the start */
-    }
-
-    a {
-        margin-top: 10px; /* Space between links */
-        margin-left: 0; /* Reset margin-left */
-    }
-}
-
 @media (max-width: 480px) {
     h1 {
-        font-size: 28px; /* Reduce heading size */
+        font-size: 24px; /* Smaller font size for smaller screens */
+        margin: 15px 0; /* Adjust margin for smaller screens */
     }
 
-    #input, #subtask-input, #button, #subtask-button {
-        width: 100%; /* Full width on small screens */
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
     }
 
-    ul li {
-        padding: 10px; /* Reduce padding for small screens */
+    input[type="text"] {
+        padding: 10px; /* Less padding for input */
+        width: calc(100% - 30px); /* Full width minus padding */
+    }
+
+    button {
+        padding: 10px; /* Less padding for buttons */
+        font-size: 14px; /* Smaller font size for buttons */
     }
 }
