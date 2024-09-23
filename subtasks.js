@@ -1,9 +1,9 @@
-// subtask.js
 var subtaskInput = document.getElementById("subtask-input");
 var subtaskButton = document.getElementById("subtask-button");
 var subtaskList = document.getElementById("subtasklist");
+var mainTaskTitle = document.getElementById("main-task-title");
 var taskIndex = localStorage.getItem('selectedTaskIndex'); // Get the selected task index
-var tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+var tasks = JSON.parse(localStorage.getItem('tasks')) || []; // Fetch tasks from local storage
 
 // Trigger "Add" button when Enter is pressed
 subtaskInput.addEventListener("keypress", function(event) {
@@ -32,6 +32,9 @@ function saveTasks() {
 // Display the sub-task list
 function showSubTaskList() {
     subtaskList.innerHTML = '';
+
+    // Display the main task title in h1
+    mainTaskTitle.textContent = tasks[taskIndex].taskName;
 
     tasks[taskIndex].subTasks.forEach(function(subtask, index) {
         var li = document.createElement('li');
